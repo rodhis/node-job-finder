@@ -29,8 +29,130 @@
   border: 1px solid transparent;
 }
 
-.nav-link.btn.btn-primary:hover {
+.nav-link.btn.btn-primary:hover,
+.list-group-item a:hover {
   background-color: #fff;
   color: #f03e3e;
   border-color: #f03e3e;
+}
+
+/* banner */
+
+#top-container {
+  padding: 7rem;
+  background-color: #f7f9fc;
+  border-bottom: 4px solid #013068;
+  margin-bottom: 30px;
+  background-image: url("../img/banner2.jpg");
+  background-position: 0 100px;
+  background-size: cover;
+  color: #fff;
+}
+
+#main-title {
+  padding: 30px 0;
+  font-size: 3rem;
+}
+
+#main-subtitle {
+  font-size: 1rem;
+  padding: 5rem;
+}
+
+/* form */
+
+#search-form {
+  padding: 30px 100px;
+}
+
+#search-form .col-md-10,
+#search-form .col-md-2 {
+  padding: 0;
+}
+
+#search-form input,
+#search-form button {
+  width: 100%;
+  border-radius: 0;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+#search-form button {
+  color: #fff;
+  background-color: #f03e3e;
+  border: 1px solid transparent;
+}
+
+#search-form button:hover {
+  background-color: #012652;
+  color: #fff;
+  border-color: #000;
+  font-weight: bold;
+}
+
+/* job listing */
+
+#job-container {
+  padding: 0 100px 50px 100px;
+}
+
+#job-list .list-group-item {
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  padding: 15px 80px;
+  color: #212529;
+  height: 120px;
+}
+
+#job-list .list-group-item p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#job-list .list-group-item.new-job {
+  border: none;
+  background-color: #faf0b5;
+}
+
+#job-list-title {
+  margin-bottom: 35px;
+}
+
+.list-group-item img {
+  width: 5rem;
+  border: 1px solid #212529;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -40px;
+  top: calc(50% - 40px);
+}
+
+.list-group-item a {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  height: 50px;
+  line-height: 35px;
+  background-color: #f03e3e;
+  color: #fff;
+  border-radius: 0;
+}
+
+.new-job-label {
+  background-color: #ffd500;
+  color: #4d5154;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: 250px;
+  top: 40px;
+  display: none;
+}
+
+.new-job .new-job-label {
+  display: block;
 }
