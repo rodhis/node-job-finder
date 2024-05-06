@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 const Job = require("../models/Job");
 
+// rota de teste
+router.get("/test", (req, res) => {
+  res.send("deu certo");
+});
+
 router.get("/add", (req, res) => {
   res.render("add");
 });

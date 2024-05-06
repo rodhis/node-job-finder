@@ -1,11 +1,14 @@
 const express = require("express");
-const expHandleBars = require("express-handlebars");
+const handlebars = require("express-handlebars");
 const app = express();
 const path = require("path");
 const db = require("./db/connection");
 const bodyParser = require("body-parser");
+const Job = require("./models/Job");
 
 const PORT = 3000;
+
+console.log(handlebars);
 
 app.listen(PORT, () => {
   console.log(`O express está rodando na porta ${PORT}`);
@@ -18,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // handlebars
 
 app.set("views", path.join(__dirname, "views"));
-app.engine("handlebars", expHandleBars.engine({ defaultLayout: "main" }));
+app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // static folder
@@ -38,7 +41,9 @@ db.authenticate()
 //routes
 
 app.get("/", (req, res) => {
-  res.render("index");
+  Job.findAll({ order: [["createdAt", "DESC"]] }).then((jobs) => {
+    res.render("index", { jobs });
+  });
 });
 
 //job routes
