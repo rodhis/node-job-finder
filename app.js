@@ -47,4 +47,4 @@ app.get("/", (req, res) => {
 });
 
 //job routes
-app.use("/jobs", require("./routes/jobs")); //todas as rotas job começarão com /jobs
+app.use("/jobs", require("./routes/jobs")); // all job routes will start with /jobs
