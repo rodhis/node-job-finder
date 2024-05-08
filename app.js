@@ -5,6 +5,8 @@ const path = require("path");
 const db = require("./db/connection");
 const bodyParser = require("body-parser");
 const Job = require("./models/Job");
+const Sequelize = require("sequelize");
+const op = Sequelize.Op; //Op is a sequelize package to make advanced sql queries
 
 const PORT = 3000;
 
@@ -41,9 +43,27 @@ db.authenticate()
 //routes
 
 app.get("/", (req, res) => {
-  Job.findAll({ order: [["createdAt", "DESC"]] }).then((jobs) => {
-    res.render("index", { jobs });
-  });
+  let search = req.query.job;
+  let query = "%" + search + "%"; // search for abreviations. eg: ph -> returns php, jav -> returns java or javascript
+
+  if (!search) {
+    Job.findAll({
+      order: [["createdAt", "DESC"]],
+    })
+      .then((jobs) => {
+        res.render("index", { jobs, search });
+      })
+      .catch((err) => console.log(err));
+  } else {
+    Job.findAll({
+      where: { title: { [op.like]: query } },
+      order: [["createdAt", "DESC"]],
+    })
+      .then((jobs) => {
+        res.render("index", { jobs, search });
+      })
+      .catch((err) => console.log(err));
+  }
 });
 
 //job routes
