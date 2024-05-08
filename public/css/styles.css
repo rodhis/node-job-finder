@@ -297,4 +297,37 @@
   .new-job .new-job-label {
     display: none;
   }
+
+  /* job view page */
+
+  .back-link {
+    margin-left: 1.8rem;
+  }
+
+  #job-view-container h1 {
+    font-size: 2rem;
+  }
+
+  #job-view-container p {
+    font-size: 1.2rem;
+  }
+
+  .job-desc {
+    width: 80%;
+  }
+
+  /* add page */
+
+  #form-box {
+    padding: 1.5rem;
+  }
+
+  #form-box h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #form-box button {
+    width: 100%;
+  }
 }
