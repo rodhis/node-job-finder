@@ -248,3 +248,53 @@
   color: #fff;
   text-decoration: none;
 }
+
+/* responsivity */
+
+@media (max-width: 480px) {
+  /* navbar */
+  #navbarNav {
+    text-align: center;
+  }
+
+  /* home */
+  #top-container {
+    padding: 5rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  #main-title {
+    font-size: 2rem;
+  }
+
+  #main-subtitle {
+    font-size: 1rem;
+    padding: 0 0 5rem 0;
+  }
+
+  #search-form {
+    padding: 0;
+  }
+
+  #jobs-container {
+    padding: 1.25rem;
+  }
+
+  .list-group-item {
+    padding: 1rem 5.3rem;
+  }
+
+  .list-group-item h2 {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+
+  .list-group-item img {
+    width: 3.1rem;
+    left: 15px;
+    top: calc(50% - 25px);
+  }
+
+  .new-job .new-job-label {
+    display: none;
+  }
+}

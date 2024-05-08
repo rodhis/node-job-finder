@@ -11,6 +11,6 @@
 
 <hr />
 
-This is a Node.js training project, which means you'll have to install Node.js on your machine for it to work. It also uses Express, Sequelize, Express Handlebars and SQLite. For front-end, bootstrap 4 was used for speeding up the styling.
+This is a Node.js training project, which means you'll have to install Node.js on your machine for it to work. It also uses Express, Sequelize, Express Handlebars and SQLite. For front-end, bootstrap 4 was used for speeding up the styling. It's also completely responsive to mobile devices.
 
 Note that, since it's a node and handlebars project, the index.html and add.html are not used. They'll be left on the project just in case you wish to use them on a server or something, but the job fetching and displaying will NOT work, only static placeholder texts.
