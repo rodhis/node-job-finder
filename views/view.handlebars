@@ -1,14 +1,14 @@
 <div id="job-view-container" class="container">
   <div class="row text-center">
     <a class="back-link main-color" href="/">Voltar</a>
-    <div id="img-container" class="col-md 12">
+    <div id="img-container" class="col-md-12">
       <img src="/img/company.svg" alt="company logo" />
     </div>
     <div class="col-md-12">
       <h1 class="main-color">{{job.dataValues.title}}</h1>
       <p class="bold">Perfil do contratado:</p>
       <p class="job-desc">{{job.dataValues.description}}</p>
-      <p><span class="bold">Salário:</span>R$ {{job.dataValues.salary}}</p>
+      <p><span class="bold">Salário: </span>R$ {{job.dataValues.salary}}</p>
       <p><span class="bold">Email de contato:</span>
         <a
           href="mailto:{{job.dataValues.email}}"

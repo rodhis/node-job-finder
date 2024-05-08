@@ -200,3 +200,44 @@
   border: 1px solid transparent;
   margin-top: 20px;
 }
+
+/* job-view */
+
+#job-view-container {
+  margin-top: 6.25rem;
+}
+
+#job-view-container h1 {
+  margin-bottom: 1.8rem;
+}
+
+#img-container {
+  margin-top: 1.25rem;
+  margin-bottom: 1.8rem;
+}
+
+#img-container img {
+  width: 6.25rem;
+  border-radius: 50%;
+  border: 1px solid #212529;
+}
+
+.job-desc {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.main-color {
+  color: #f03e3e;
+}
+
+.back-link {
+  border: 1px solid #f03e3e;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
