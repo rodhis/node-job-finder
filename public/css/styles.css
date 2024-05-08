@@ -240,4 +240,11 @@
   border: 1px solid #f03e3e;
   padding: 5px 10px;
   transition: 0.5s;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  background-color: #f03e3e;
+  color: #fff;
+  text-decoration: none;
 }
